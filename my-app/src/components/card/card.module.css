@@ -1,0 +1,56 @@
+.projectCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  color: var(--color-text);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.projectCard:hover {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  transform: translateY(-2px);
+}
+
+.projectCard:focus-visible {
+  outline: 3px solid #55bdc5;
+  outline-offset: 3px;
+}
+
+.projectCard__icon {
+  flex: 0 0 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.1rem;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.projectCard__content {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.projectCard__title {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.projectCard__description {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}

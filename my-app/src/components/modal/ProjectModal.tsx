@@ -40,7 +40,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         <h2 id="project-modal-title">{project.title}</h2>
         <p>
           {" "}
-          <TypewriterText  text={project.description} />
+          <TypewriterText text={project.description} />
         </p>
       </motion.section>
     </motion.div>

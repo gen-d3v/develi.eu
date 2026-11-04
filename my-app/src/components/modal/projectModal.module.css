@@ -13,10 +13,10 @@
   max-height: 85vh;
   overflow-y: auto;
   padding: 2rem;
-  border: 1px solid #c2a8a8;
+  border: 1px solid #8de1d1;
   border-radius: 0.75rem;
-  background: #fff;
-  color: #fc0000;
+  background: #0d1117;
+  color: #8de1d1  ;
   box-shadow: 0 1rem 3rem rgb(0 0 0 / 25%);
   position: relative;
 
@@ -46,4 +46,13 @@
 .closeButton:focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
+}
+
+.projectLogo {
+  position: absolute;
+  top: 3.5rem;
+  right: 1.5rem;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
 }

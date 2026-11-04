@@ -1,56 +1,52 @@
-.projectCard {
+.card {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
   width: 100%;
-  padding: 0.75rem;
-  border: 1px solid transparent;
-  border-radius: 0.75rem;
-  color: var(--color-text);
-  background: transparent;
+  min-height: 16rem;
+  padding: 2rem;
+  border: 1px solid #111;
+  border-radius: 1.5rem;
+  background: #d9d9d9;
+  color: #222;
   text-align: left;
   cursor: pointer;
-  transition:
-    background-color 160ms ease,
-    border-color 160ms ease,
-    transform 160ms ease;
 }
 
-.projectCard:hover {
-  background: var(--color-surface);
-  border-color: var(--color-border);
-  transform: translateY(-2px);
+.logo {
+  align-self: flex-end;
+  width: 3rem;
+  height: 3rem;
 }
 
-.projectCard:focus-visible {
-  outline: 3px solid #55bdc5;
-  outline-offset: 3px;
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
-.projectCard__icon {
-  flex: 0 0 1.5rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-top: 0.1rem;
-  stroke: currentColor;
-  stroke-width: 1.8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 }
 
-.projectCard__content {
-  display: grid;
-  gap: 0.35rem;
+.title {
+  font-size: 1.7rem;
+  font-weight: 700;
 }
 
-.projectCard__title {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  font-weight: 600;
+.description {
+  color: #777;
+  font-size: 1.2rem;
 }
 
-.projectCard__description {
-  color: var(--color-muted);
-  font-size: 0.875rem;
-  line-height: 1.5;
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card:focus-visible {
+  outline: 3px solid #555;
+  outline-offset: 4px;
 }

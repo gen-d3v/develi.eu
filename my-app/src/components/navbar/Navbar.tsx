@@ -11,7 +11,7 @@ export default function Navbar() {
     <div>
       <nav className={styles.Navbar}>
         <Link to="/" className={styles.siteTitle}>
-          Develi.eu
+          ugdeveli.com
         </Link>
         <ul className={styles.navList}>
           <NavItem to="/">Home</NavItem>

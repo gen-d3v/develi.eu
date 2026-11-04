@@ -1,0 +1,49 @@
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(128, 126, 126, 0.65);
+}
+
+.projectModal {
+  width: min(100%, 42rem);
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 2rem;
+  border: 1px solid #c2a8a8;
+  border-radius: 0.75rem;
+  background: #fff;
+  color: #fc0000;
+  box-shadow: 0 1rem 3rem rgb(0 0 0 / 25%);
+  position: relative;
+
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: inherit;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: rgb(0 0 0 / 8%);
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

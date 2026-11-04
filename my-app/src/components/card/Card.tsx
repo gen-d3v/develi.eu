@@ -1,36 +1,36 @@
-type ProjectCardProps = {
+import styles from "./Card.module.css";
+import { motion } from "motion/react";
+
+type CardProps = {
+  id: string | undefined;
   title: string;
   description: string;
+  logoSrc?: string;
   onClick: () => void;
 };
 
 export default function Card({
+  id,
   title,
   description,
+  logoSrc,
   onClick,
-}: ProjectCardProps) {
+}: CardProps) {
   return (
-    <button
-      className="projectCard"
+    <motion.button
+      layoutId={`project-${id}`}
+      className={styles.card}
       type="button"
       onClick={onClick}
-      aria-haspopup="dialog"
     >
-      <svg
-        className="projectCard__icon"
-        viewBox="0 0 24 24"
-        fill="none"
-        aria-hidden="true"
-      >
-        <circle cx="12" cy="12" r="9" />
-        <path d="M12 11v5" />
-        <path d="M12 8h.01" />
-      </svg>
-
-      <span className="projectCard__content">
-        <span className="projectCard__title">{title}</span>
-        <span className="projectCard__description">{description}</span>
+      <span className={styles.logo}>
+        {logoSrc && <img src={logoSrc} alt="" />}
       </span>
-    </button>
+
+      <span className={styles.text}>
+        <span className={styles.title}>{title}</span>
+        <span className={styles.description}>{description}</span>
+      </span>
+    </motion.button>
   );
 }

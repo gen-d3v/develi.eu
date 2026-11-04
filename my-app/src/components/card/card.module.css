@@ -93,3 +93,32 @@
     width: 5rem;
   }
 }
+
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: fit-content;
+  margin-bottom: 0.4rem;
+  font-size: 0.85rem;
+}
+
+.statusDot {
+  width: 0.65rem;
+  height: 0.65rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+}
+
+.completed .statusDot {
+  background: #3fb950;
+}
+
+.inProgress .statusDot {
+  background: #d29922;
+}
+
+.onHold .statusDot {
+  background: #f85149;
+}

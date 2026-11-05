@@ -2,8 +2,7 @@ import { useState } from "react";
 import Card, { type ProjectStatus } from "../../components/card/Card";
 import ProjectModal from "../../components/modal/ProjectModal";
 import styles from "./Homepage.module.css";
-import NDALogo from "../../assets/NDA.png";
-import git from "../../assets/git.png";
+import { NDA, git, kilic, auas } from "../../assets";
 import { AnimatePresence } from "motion/react";
 
 type Project = {
@@ -21,15 +20,32 @@ const projects: Project[] = [
     title: "Update Monitor",
     summary: "Detecteert beschikbare software-updates.",
     description: "De volledige beschrijving van het project...",
-    logo: NDALogo,
+    logo: NDA,
     status: "in-progress",
   },
   {
     id: "home-lab",
-    title: "HomeLab",
-    summary: "Een zelfgebouwd Proxmox-cluster.",
+    title: "Proxmox Home Lab",
+    summary: "Three-node home cluster automated with OpenTofu and Ansible",
     description: "De volledige beschrijving van het project...",
     logo: git,
+    status: "in-progress",
+  },
+  {
+    id: "kilic",
+    title: "Privacy-Focused Workforce CRM",
+    summary:
+      "A web application for securely managing workers and employment relationships.",
+    description: "De volledige beschrijving van het project...",
+    logo: kilic,
+    status: "on-hold",
+  },
+  {
+    id: "Studio CR Cloud — Private Cloud for Cyber Resilience",
+    title: "Studio CR Cloud — Private Cloud for Cyber Resilience",
+    summary: "Proxmox-based platform for cybersecurity education and exercises",
+    description: "De volledige beschrijving van het project...",
+    logo: auas,
     status: "completed",
   },
 ];
